@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import "./new-todo.css";
 
 //interface or type
 //type NewTodoProps = {}
@@ -8,7 +9,7 @@ interface NewTodoProps {
 
 const NewTodo: React.FC<NewTodoProps> = ({ onAddTodo }) => {
   const textInputRef = useRef<HTMLInputElement>(null);
-  console.log(textInputRef);
+  // console.log(textInputRef);
 
   const sumbitHandler = (event: React.FormEvent) => {
     event.preventDefault();
@@ -26,7 +27,7 @@ const NewTodo: React.FC<NewTodoProps> = ({ onAddTodo }) => {
 
   return (
     <form onSubmit={sumbitHandler}>
-      <div>
+      <div className="form-control">
         <label htmlFor="todo-text">Todo Text</label>
         <input type="text" id="todo-text" ref={textInputRef} />
       </div>
