@@ -31,4 +31,5 @@ const App: React.FC = () => {
 export default App;
 
 // const words = ["hi", "there"];
-// words.filter((word) => word !== "word");
+// words.filter((word) => word !== "hi");
+//output = ["there"]
