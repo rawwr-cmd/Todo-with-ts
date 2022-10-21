@@ -1,5 +1,12 @@
 import { useRef } from "react";
-const NewTodo: React.FC = () => {
+
+//interface or type
+//type NewTodoProps = {}
+interface NewTodoProps {
+  onAddTodo: (todoText: string) => void;
+}
+
+const NewTodo: React.FC<NewTodoProps> = ({ onAddTodo }) => {
   const textInputRef = useRef<HTMLInputElement>(null);
   console.log(textInputRef);
 
@@ -13,7 +20,8 @@ const NewTodo: React.FC = () => {
       return;
     }
 
-    console.log(enteredText);
+    // console.log(enteredText);
+    onAddTodo(enteredText);
   };
 
   return (
